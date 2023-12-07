@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,10 +7,14 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { useSectionInView } from "@/lib/hooks";
 
 const Intro = () => {
+  const { ref } = useSectionInView("Home");
+
   return (
     <section
+      ref={ref}
       id="home"
       className="mb-20 max-w-[50rem] text-center scroll-mt-[99rem]"
     >
