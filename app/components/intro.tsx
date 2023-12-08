@@ -16,7 +16,7 @@ const Intro = () => {
     <section
       ref={ref}
       id="home"
-      className="mb-20 max-w-[50rem] text-center scroll-mt-[99rem]"
+      className="mb-28 max-w-[100rem] sm:max-w-[50rem] text-center scroll-mt-[99rem]"
     >
       <div className="flex items-center justify-center">
         <motion.div
