@@ -26,9 +26,9 @@ export default function Project({
     <motion.article
       ref={ref}
       style={{ scale: scaleProgress, opacity: opacityProgress }}
-      className="group relative bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 rounded-lg mb-3 sm:mb-8 last:mb-0 even:pl-8 sm:h-[20rem] hover:bg-gray-200 transition"
+      className="group relative bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 rounded-lg mb-3 sm:mb-8 last:mb-0 sm:even:pl-8 sm:h-[20rem] hover:bg-gray-200 transition"
     >
-      <div className="flex flex-col px-5 pt- pb-7 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] h-full group-even:ml-[18rem]">
+      <div className="flex flex-col px-5 pt-2 pb-7 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] h-full sm:group-even:ml-[18rem]">
         <h3 className="text-2xl font-semibold">{title}</h3>
         <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
         <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
