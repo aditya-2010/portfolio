@@ -1,9 +1,12 @@
 "use client";
 
 import { projectsData } from "@/lib/data";
-import { useScroll, motion, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -12,6 +15,8 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  liveLink,
+  githubLink,
 }: ProjectProps) {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -31,6 +36,24 @@ export default function Project({
       <div className="flex flex-col px-5 pt-2 pb-7 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] h-full sm:group-even:ml-[18rem]">
         <h3 className="text-2xl font-semibold">{title}</h3>
         <p className="mt-2 leading-relaxed text-gray-700">{description}</p>
+
+        <div className="flex gap-3 w-full items-center my-4">
+          <Link
+            href={liveLink}
+            target="_blank"
+            className="flex items-center gap-2 bg-gray-700 text-white px-2 py-1 rounded-full outline-none hover:bg-gray-800 hover:shadow-md transition"
+          >
+            Live Link <FiExternalLink />
+          </Link>
+          <Link
+            href={githubLink}
+            target="_blank"
+            className="flex items-center gap-2 bg-white text-gray-600 px-1 py-1 rounded-full outline-none hover:bg-gray-300 hover:shadow-md transition"
+          >
+            GitHub Code <FiExternalLink />
+          </Link>
+        </div>
+
         <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
           {tags.map((tag, index) => (
             <li

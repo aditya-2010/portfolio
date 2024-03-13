@@ -1,10 +1,7 @@
+import pdfChatImage from "@/public/pdf-chat.png";
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import dashboard from "@/public/dashboard.png";
-import filmfolio from "@/public/filmfolio.png";
-// import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
@@ -69,39 +66,28 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Business Management Dashboard",
+    title: "PDFChat",
     description:
-      " A web-based dashboard application that allows users to manage various aspects of their e-commerce websites.",
-    tags: [
-      "React",
-      "PostgreSQL",
-      "SupaBase",
-      "Material UI",
-      "Styled Components",
-    ],
-    imageUrl: dashboard,
-  },
-  {
-    title: "Film Folio",
-    description:
-      "A webpage to find your favorite movies, leave a rating and also add them to the watchlist.",
-    tags: ["React", "JavaScript", "OMDB API"],
-    imageUrl: filmfolio,
+      "AI based web app where you can upload any PDF and ask questions about it.",
+    tags: ["Next.js", "OpenAI", "Langchain", "Prisma ORM", "Tailwind CSS"],
+    imageUrl: pdfChatImage,
+    liveLink: "https://pdf-chat-aditya.vercel.app/",
+    githubLink: "https://github.com/aditya-2010/pdf-chat",
   },
 ] as const;
 
 export const skillsData = [
+  "Next.js",
+  "React",
+  "Python",
+  "TypeScript",
+  "JavaScript",
+  "Tailwind CSS",
   "HTML",
   "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
   "Node.js",
   "Git",
-  "Tailwind CSS",
   "Express",
   "PostgreSQL",
-  "Python",
   "Framer Motion",
 ] as const;
